@@ -7,26 +7,21 @@ import java.sql.SQLException;
 public class ConnectionFactory {
 
 	private Connection connection;
+	private String user;
+	private String password;
+	private String nomeBanco;
 
-	public ConnectionFactory() {
+	public ConnectionFactory(String user, String password, String nomeBanco) {
+		this.user = user;
+		this.password = password;
+		this.nomeBanco = nomeBanco;
 		this.connection = null;
 	}
 
-	public Connection getConnection() {
+	public Connection getConnectionMysql() {
 
 		try {
-			connection = DriverManager.getConnection("jdbc:mysql://localhost/banco", "root", "12345");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return connection;
-	}
-
-	public Connection getConnection(String user, String password) {
-
-		try {
-			connection = DriverManager.getConnection("jdbc:mysql://localhost/banco", user, password);
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + nomeBanco, user, password);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -34,4 +29,24 @@ public class ConnectionFactory {
 
 		return connection;
 	}
+
+	public Connection getConnectionPostgres() {
+		try {
+			connection = DriverManager.getConnection("jdbc:postgres://localhost:5432/" + nomeBanco, user, password);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return connection;
+	}
+
+	public String getUser() {
+		return user;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
 }
