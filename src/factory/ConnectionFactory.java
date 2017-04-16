@@ -18,6 +18,9 @@ public class ConnectionFactory {
 		this.connection = null;
 	}
 
+	/*
+	 * Metodo para obtenção de uma conexão mysql
+	 */
 	public Connection getConnectionMysql() {
 
 		try {
@@ -30,6 +33,9 @@ public class ConnectionFactory {
 		return connection;
 	}
 
+	/*
+	 * Metodo para obtenção de uma conexão postgres
+	 */
 	public Connection getConnectionPostgres() {
 
 		try {
