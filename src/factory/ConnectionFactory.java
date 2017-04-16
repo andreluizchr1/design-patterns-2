@@ -19,7 +19,8 @@ public class ConnectionFactory {
 	}
 
 	/*
-	 * Metodo para obtenção de uma conexão mysql
+	 * <<<<<<< HEAD Metodo para obtenção de uma conexão mysql =======
+	 * GetConnection do Banco Mysql >>>>>>> padrao_factory
 	 */
 	public Connection getConnectionMysql() {
 
@@ -34,7 +35,7 @@ public class ConnectionFactory {
 	}
 
 	/*
-	 * Metodo para obtenção de uma conexão postgres
+	 * GetConnection do Banco Postgres
 	 */
 	public Connection getConnectionPostgres() {
 
