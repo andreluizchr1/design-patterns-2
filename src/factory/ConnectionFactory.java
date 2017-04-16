@@ -16,4 +16,17 @@ public class ConnectionFactory {
 		}
 		return connection;
 	}
+
+	public Connection getConnection(String user, String password) {
+		Connection connection = null;
+
+		try {
+			connection = DriverManager.getConnection("jdbc:mysql://localhost/banco", user, password);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return connection;
+	}
 }
