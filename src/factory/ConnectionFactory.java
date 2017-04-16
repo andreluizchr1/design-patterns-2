@@ -55,6 +55,9 @@ public class ConnectionFactory {
 		return user;
 	}
 
+	/*
+	 * Metodo getPassword
+	 */
 	public String getPassword() {
 		return password;
 	}
