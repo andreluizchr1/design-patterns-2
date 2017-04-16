@@ -33,6 +33,9 @@ public class ConnectionFactory {
 		return connection;
 	}
 
+	/*
+	 * GetConnection do Banco Postgres
+	 */
 	public Connection getConnectionPostgres() {
 
 		try {
