@@ -47,7 +47,10 @@ public class ConnectionFactory {
 
 		return connection;
 	}
-
+	
+	/*
+	 * Metodo getUser
+	 */
 	public String getUser() {
 		return user;
 	}
