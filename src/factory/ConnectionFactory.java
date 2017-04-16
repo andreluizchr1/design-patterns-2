@@ -18,6 +18,9 @@ public class ConnectionFactory {
 		this.connection = null;
 	}
 
+	/*
+	 * GetConnection do Banco Mysql
+	 */
 	public Connection getConnectionMysql() {
 
 		try {
