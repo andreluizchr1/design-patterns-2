@@ -6,6 +6,9 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
 
+	/*
+	 * Autor André Luiz
+	 */
 	private Connection connection;
 	private String user;
 	private String password;
