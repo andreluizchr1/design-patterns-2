@@ -5,9 +5,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionFactory {
-	/*
-	 * Autor André Luiz Chaves Rodrigues
-	 */
 
 	private Connection connection;
 	private String user;
