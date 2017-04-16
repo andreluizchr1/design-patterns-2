@@ -6,8 +6,14 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
 
+	private Connection connection;
+
+	public ConnectionFactory() {
+		this.connection = null;
+	}
+
 	public Connection getConnection() {
-		Connection connection = null;
+
 		try {
 			connection = DriverManager.getConnection("jdbc:mysql://localhost/banco", "root", "12345");
 		} catch (SQLException e) {
@@ -18,7 +24,6 @@ public class ConnectionFactory {
 	}
 
 	public Connection getConnection(String user, String password) {
-		Connection connection = null;
 
 		try {
 			connection = DriverManager.getConnection("jdbc:mysql://localhost/banco", user, password);
