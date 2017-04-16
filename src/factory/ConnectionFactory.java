@@ -62,6 +62,9 @@ public class ConnectionFactory {
 		return password;
 	}
 
+	/*
+	 * Metodo NomeBanco
+	 */
 	public String getNomeBanco() {
 		return nomeBanco;
 	}
