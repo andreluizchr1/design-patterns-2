@@ -31,6 +31,7 @@ public class ConnectionFactory {
 	}
 
 	public Connection getConnectionPostgres() {
+
 		try {
 			connection = DriverManager.getConnection("jdbc:postgres://localhost:5432/" + nomeBanco, user, password);
 		} catch (SQLException e) {
@@ -47,6 +48,10 @@ public class ConnectionFactory {
 
 	public String getPassword() {
 		return password;
+	}
+
+	public String getNomeBanco() {
+		return nomeBanco;
 	}
 
 }
