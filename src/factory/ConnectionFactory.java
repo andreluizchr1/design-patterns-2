@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConnectionFactory {
 
 	/*
-	 * Autor André Luiz
+	 * Autor André Luiz C. Rodrigues
 	 */
 	private Connection connection;
 	private String user;
