@@ -6,9 +6,6 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
 
-	/*
-	 * Autor André Luiz C. Rodrigues
-	 */
 	private Connection connection;
 	private String user;
 	private String password;
@@ -28,7 +25,7 @@ public class ConnectionFactory {
 	public Connection getConnectionMysql() {
 
 		try {
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + nomeBanco, user, password);
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/+" + nomeBanco, user, password);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -51,15 +48,24 @@ public class ConnectionFactory {
 
 		return connection;
 	}
-
+	
+	/*
+	 * Metodo getUser
+	 */
 	public String getUser() {
 		return user;
 	}
 
+	/*
+	 * Metodo getPassword
+	 */
 	public String getPassword() {
 		return password;
 	}
 
+	/*
+	 * Metodo NomeBanco
+	 */
 	public String getNomeBanco() {
 		return nomeBanco;
 	}
