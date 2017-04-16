@@ -24,7 +24,7 @@ public class ConnectionFactory {
 	public Connection getConnectionMysql() {
 
 		try {
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + nomeBanco, user, password);
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/+" + nomeBanco, user, password);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
